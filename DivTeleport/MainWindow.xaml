@@ -1,0 +1,31 @@
+﻿<Window x:Class="DivTeleport.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DivTeleport"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="797" Width="1000" Loaded="Window_Loaded" ResizeMode="NoResize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="163*"/>
+            <ColumnDefinition Width="129*"/>
+        </Grid.ColumnDefinitions>
+        <ToolBar Height="26" VerticalAlignment="Top" Grid.ColumnSpan="2">
+            <Button Height="20" Name="W0" Content="World 0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="W0_Click"/>
+            <Button Height="20" x:Name="W1" Content="World 1" Click="W1_Click"/>
+            <Button Height="20" x:Name="W2" Content="World 2" Click="W2_Click"/>
+            <Button Height="20" x:Name="W3" Content="World 3" Click="W3_Click"/>
+            <Button Height="20" x:Name="W4" Content="World 4" Click="W4_Click"/>
+            <TextBox Name="TextBox" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+            <Button Height="20" x:Name="Save" Content="Save" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Save_Click"/>
+        </ToolBar>
+        <ScrollViewer Name="ScrV"  VerticalScrollBarVisibility="Hidden" Margin="0,26,0,0" PreviewMouseLeftButtonDown="ScrV_MouseDown" ScrollChanged="ScrV_ScrollChanged" Grid.ColumnSpan="2">
+            <Image Name="WorldImg" Source="world_0.png"/>
+        </ScrollViewer>
+        <Canvas PreviewMouseLeftButtonDown="ScrV_MouseDown" Grid.ColumnSpan="2" >
+            <Image Name="mark" Source="/mark.png" Canvas.Left="247" Canvas.Top="232" Stretch="Fill" Width="16" Height="23"/>
+        </Canvas>
+
+    </Grid>
+</Window>
