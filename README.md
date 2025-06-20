@@ -1,3 +1,4 @@
+![Alt text](/Screenshot.png?)
 The utility allows you to teleport the player to any point on any game map.
 How to use:
 1. Launch the application, click "open" and select the desired save.
